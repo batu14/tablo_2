@@ -1,0 +1,80 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+body{
+    width:100vw;
+    height:100vh;
+    background-color:#ccc;
+   
+   
+
+
+}
+.table{
+    width:100%;
+    
+}
+.nav{
+
+    margin-left:5%;
+    margin-top:1rem;
+    border-radius:1rem;
+    width:90%;
+    height:70px;
+    background-color:rgba(0,0,0,.5);
+    display:flex;
+    flex:row;
+    align-items:center;
+    justify-content:center;
+    gap:2rem;
+}
+.nav input{
+
+    width:7rem;
+    height:3rem;
+    border:none;
+    background-color:lightseagreen;
+    border-radius:1rem;
+    font-size:1rem;
+    padding:.5rem;
+    color:white;
+    transition:300ms all ease-in-out;
+    cursor:pointer;
+}
+.nav input:hover{
+    background-color:cornflowerblue;
+}
+.nav select{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    width:10rem;
+    background-color:cadetblue;
+    font-size:1.1rem;
+    padding:1rem;
+    border-radius:1rem;
+    color:white;
+
+}
+.table > tr{
+    background-color:#ddd !important;
+    padding:.5rem;
+
+
+
+}
+.container {
+
+    margin-left: 5%;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    width: 90%;
+    height: auto;
+    min-height:250px;
+    background-color: rgba(0,0,0,.5);
+    overflow-y:scroll;
+    display:table;
+}
