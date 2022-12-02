@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="tablo.index" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="tablo.index" %>
 
 <!DOCTYPE html>
 
@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="stylesheet" type="text/css" href="index.css" />
+    
     <title>Tablo</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
                 
         </div>
         <div class="container">
-        <asp:Table ID="table" runat="server"  GridLines="Both"  Width="100%"        HorizontalAlign="Center" CellSpacing="3"  BorderStyle="None"     CellPadding="3">          
+        <asp:Table ID="table" runat="server"  >          
         </asp:Table>
         </div>
 
