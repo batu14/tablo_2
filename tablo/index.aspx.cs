@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -53,55 +53,51 @@ namespace tablo
             rows.CssClass = "tableHead";
             while (dr.Read())
             {
-               
+
                 colNames.Add(dr["COLUMN_NAME"].ToString());
-               
+
 
             }
-           
-            
+
+
             for (int i = 0; i < colNames.Count; i++)
             {
-                
+
                 TableCell cell = new TableCell();
                 cell.Text = colNames[i];
                 rows.Cells.Add(cell);
                 table.Rows.Add(rows);
             }
             dr.Close();
-           
+
             string row = "select * from " + DropDownList1.SelectedItem.ToString() + "";
             SqlCommand komut2 = new SqlCommand(row, baglanti);
             SqlDataReader dr2 = komut2.ExecuteReader();
             while (dr2.Read())
             {
-                for (int i = 0; i < colNames.Count; i++)
-                {
-                    rowNames.Add(dr2[colNames[i].ToString()].ToString());
-                }
-            }
-            for (int i = 0; i < rowNames.Count; i++)
-            {
+                Response.Write(dr2[0].ToString());
                 TableRow tableRow = new TableRow();
-                tableRow.CssClass = "tableBody";
-                for (int j = 0; j < colNames.Count; j++)
+                
+                for (int i = 0; i < dr2.VisibleFieldCount; i++)
                 {
+                    
                     TableCell cell = new TableCell();
-                    cell.Text = rowNames[j];
+                    cell.Text = dr2[i].ToString();
                     tableRow.Cells.Add(cell);
+                    table.Rows.Add(tableRow);
                   
+
+
                 }
-                table.Rows.Add(tableRow);
-
-
-
             }
-            dr2.Close();
-            baglanti.Close();
+
+            
+              dr2.Close();
+              baglanti.Close();
 
 
 
-
+            
 
         }
 
